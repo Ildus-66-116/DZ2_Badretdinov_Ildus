@@ -18,5 +18,4 @@ break;}
 else if(n > (100*i) && n < (1000*i))
 {Console.WriteLine(n % (10*i)/(1*i));
 break;}
-i = i * 10;
-}
+i = i * 10;}

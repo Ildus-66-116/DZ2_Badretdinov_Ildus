@@ -9,33 +9,50 @@
 
 // В выходной файл OUTPUT.TXT выведите целое число – значение второго максимума.
 
+// Console.Clear();
+// Console.Write("Введите 1 чило: ");
+// int a = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите 2 чило: ");
+// int b = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите 3 чило: ");
+// int c = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите 4 чило: ");
+// int d = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите 5 чило: ");
+// int e = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите 6 чило: ");
+// int f = int.Parse(Console.ReadLine()!);
+// int g = 0;
+// Console.WriteLine ($"{a} {b} {c} {d} {e} {f} {g}");
+// int max = a;
+// if(max < b) max = b;
+// if(max < c) max = c;
+// if(max < d) max = d;
+// if(max < e) max = e;
+// if(max < f) max = f;
+// Console.WriteLine (max);
+// int max1 = 0;
+// if(max1 > max && max1 < a) max1 = a;
+// else if(max1 < max && max1 <b) max1 = b;
+// else if(max1 < max && max1 <c) max1 = c;
+// else if(max1 < max && max1 <d) max1 = d;
+// else if(max1 < max && max1 <e) max1 = e;
+// else if(max1 < max && max1 <f) max1 = f;
+// Console.Write($"Второе максимальное число {max1}");
+
 Console.Clear();
-Console.Write("Введите 1 чило: ");
-int a = int.Parse(Console.ReadLine()!);
-Console.Write("Введите 2 чило: ");
-int b = int.Parse(Console.ReadLine()!);
-Console.Write("Введите 3 чило: ");
-int c = int.Parse(Console.ReadLine()!);
-Console.Write("Введите 4 чило: ");
-int d = int.Parse(Console.ReadLine()!);
-Console.Write("Введите 5 чило: ");
-int e = int.Parse(Console.ReadLine()!);
-Console.Write("Введите 6 чило: ");
-int f = int.Parse(Console.ReadLine()!);
-int g = 0;
-Console.WriteLine ($"{a} {b} {c} {d} {e} {f} {g}");
-int max = a;
-if(max < b) max = b;
-if(max < c) max = c;
-if(max < d) max = d;
-if(max < e) max = e;
-if(max < f) max = f;
-Console.WriteLine (max);
-int max1 = 0;
-if(max1 > max && max1 < a) max1 = a;
-else if(max1 < max && max1 <b) max1 = b;
-else if(max1 < max && max1 <c) max1 = c;
-else if(max1 < max && max1 <d) max1 = d;
-else if(max1 < max && max1 <e) max1 = e;
-else if(max1 < max && max1 <f) max1 = f;
-Console.Write($"Второе максимальное число {max1}");
+Console.Write("Введите число: ");
+int n = int.Parse(Console.ReadLine()!), max1 = n, max2 = 0;
+while (n != 0)
+{
+    Console.Write("Введите число: ");
+    n = int.Parse(Console.ReadLine()!);
+    if (max1 < n)
+    {
+        max2 = max1;
+        max1 = n;
+    }
+    else if (max2 < n)
+        max2 = n;
+}
+Console.WriteLine(max2);
